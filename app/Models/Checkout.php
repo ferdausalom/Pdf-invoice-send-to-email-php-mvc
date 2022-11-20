@@ -64,7 +64,6 @@ class Checkout
                 'user_id' => $item->user_id,
                 'product_id' => $item->product_id,
                 'quantity' => $item->quantity,
-                'user_id' => $item->user_id,
                 'address_id' => $address_id
             ];
 
@@ -134,7 +133,7 @@ class Checkout
         }
     }
 
-    private function setPaypalIdKey(Type $var = null)
+    private function setPaypalIdKey()
     {
         $gateway = Omnipay::create('PayPal_Rest');
 
